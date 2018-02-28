@@ -55,10 +55,13 @@ next.addEventListener("click", function() {
 
 
 };
-window.onload = function() {
-  section2Slider();  
-}
+
+// window.onload = function() {
+//   section2Slider();  
+// }
 // slider Pakiety pobytowe END
+
+
 
 // slider Galery START
 let GalerySlider = function(x,pause,play) {
@@ -134,13 +137,25 @@ nextGalery.addEventListener("click", function() {
 window.onload = function() {
   GalerySlider(4,"pause.png","play.svg");  
   GalerySlider(6,"pauseWhite.png","playWhite.png"); 
+  section2Slider();  
 }
 // slider Galery END
 
 
+// BACK TO TOP START
+$(".goTop").click(function (){
+   $('html, body').animate({
+     scrollTop: $('#header').offset().top
+}, 1000, 'linear');
+});
+
+//BACK TO TOP END
 
 
 
+// header sticky START
+    
+//  header sticky END 
 
 
 

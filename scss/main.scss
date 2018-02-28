@@ -16,10 +16,11 @@ header{
   width:100%;
   height:100px;
   background-color:#fff;
-  -webkit-box-shadow:0px 15px 65px 20px rgba(222,221,221,1);
-  -moz-box-shadow:0px 15px 65px 20px rgba(222,221,221,1);
-  box-shadow: 0px 15px 65px 20px rgba(222,221,221,1);
+  -webkit-box-shadow:0px 15px 65px 0px rgba(222,221,221,1);
+  -moz-box-shadow:0px 15px 65px 0px rgba(222,221,221,1);
+  box-shadow: 0px 15px 65px 0px rgba(222,221,221,1);
   z-index: 999;
+  position:fixed;
   nav{
     width: 88%;
     height:100%;
@@ -33,10 +34,10 @@ header{
       li{
         font-family: $family1; 
         font-weight: bold;
-        color:#1a1414;
         display:inline-block;
         font-size: 12px;
         letter-spacing: 3px;
+      
       }
       .menu_pl_img{
         display:block;
@@ -51,9 +52,31 @@ header{
         height:28px;
         background-image: url(' ../img/logo_hotel.png');
       }
+        a, a:visited {
+          text-decoration: none;
+          position: relative;
+          color:#1a1414;
+        }
+        a:after, a:visited:after {
+          content: '';
+          height: 3px;
+          position: absolute;
+          top: 15px;
+          left: 0;
+          width: 0%;
+          background: #841f1f; 
+          transition: 0.2s;
+        }
+        a:hover:after, a:visited:hover:after {
+          width: 100%;
+          
+        }
+        a:hover{
+          color:#841f1f;
+        }
+      }
     }
   }
-}
 // HEADER END
 
 /////////////////////////////////////////////////////////////////////////////////////////
@@ -62,6 +85,7 @@ header{
 // SECTION 1 START
 
 #section1{
+  top:100px;
   display:flex;
   justify-content:center;
   width:100%;
@@ -745,19 +769,84 @@ header{
     .footer-right{
       width:50%;
       height:70px;
-      border:1px solid black;
-      ul{
-        display:flex;
-        justify-content:space-around;
-        width:100%;
-        height:100%;
-        align-items:center; 
-        li{
-          display:inline-block;
-          font-size:0.7rem;
+      }
+      .footer-left{
+        ul{
+          display:flex;
+          justify-content:space-around;
+          width:100%;
+          height:100%;
+          align-items:center; 
+          li{
+            display:inline-block;
+            font-size:0.7rem;
+          }
         }
       }
-    }
+      .footer-right{
+        display:flex;
+        justify-content:space-around;
+        align-items:center;
+        ul{
+          height:100%;
+          li{
+            display:inline-block;
+            .face,.instagram,.owl,.hotel{
+              display:block;
+              height:40px;
+              width:40px;
+              border:1px solid #d3d3d3;
+              display:flex;
+              justify-content:center;
+              align-items:center;
+              &:hover .img-hover{
+                display:block;
+              }
+              &:hover .img1{
+                display:none;
+              }
+
+              img{
+                width:80%;
+                height:80%;
+              }
+              .img-hover{
+                width:80%;
+                height:80%;
+                display:none;
+              }
+            }
+          }
+        }
+        .goTop{
+          display:flex;
+          align-items:center;
+            &:hover .back-to-top-button{
+              background-position-y: -500%;
+              background-repeat: repeat-y;
+              background-color:#841f1f;
+              }
+             &:hover .back-to-top{
+              font-weight: 700;
+             } 
+          .back-to-top-button{
+            margin-left: 20px;
+            border-radius:3px;
+            background-color:#000;
+            background-image: url('../img/svg/up-arrow.png');
+            background-size: 60%;
+            background-repeat: no-repeat;
+            background-position: center;
+            display:block;
+            height:40px;
+            width:40px;
+            border:1px solid black;
+            transition-duration:1000ms;
+            transition-delay:100ms;
+          }
+          font-family: $family1;
+        }
+      }
   }
 
     
