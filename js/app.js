@@ -137,4 +137,16 @@ window.onload = function() {
 }
 // slider Galery END
 
+
+
+
+
+
+
+
+
+
+
+
+
 });

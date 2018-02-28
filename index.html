@@ -11,7 +11,7 @@
   <link rel="stylesheet" href="css/font-awesome-4.7.0/css/font-awesome.css">
   <link href="https://fonts.googleapis.com/css?family=Raleway:100,300,400,700" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Poiret+One" rel="stylesheet">
-
+  
 </head>
 <body>
 
@@ -281,16 +281,62 @@
 <!-- SECTION 8 START -->
 
 <section id="section8">
-  <div class="map">
-    
+  <div class="map"></div>
+  <div class="newsletter">
+    <div class="newsletter-top">
+      <div class="newsletter-top-mid">
+        <div class="mid-left">
+          <p class="adres">HOTEL ****</p>
+          <p class="adres">ul. przykładowa 23</p>
+          <p class="adres">44-444 Przykład</p>
+          <p class="adres mid-reserwed">REZERWUJ BEZ POŚREDNIKÓW I OSZCZĘDZAJ!</p>
+        </div>
+        <div class="mid-right">
+          <p class="adres mid-reserwed-right">RECEPCJA</p>
+          <p class="adres">tel: +48 33 888 77 66</p>
+          <p class="adres">recepcja@hotel.pl</p>
+        </div>
+      </div>
+    </div>
+    <div class="newsletter-bottom">
+      <h4 class="discount">ZAMÓW KOD RABATOWY</h4>
+      <p class="discount">Podaj swój adres email, a otrzymasz jednorazowy kod rabatowy -10%.</p>
+      <p class="discount">Sprawdź warunki promocji i oszczędzaj!.</p>
+      <div class="form">
+        <form>
+        <div class="inputs">
+          <input type="text" id="mail" name="mail" placeholder="adres email...">
+          <button class="button">WYŚLIJ</button>
+        </div>
+          
+          <label class="checkbox"><input type="checkbox" >Akceptuję regulami promocji * </label>
+        </form>
+      </div>
+    </div>
   </div>
 </section>
+          
 
 
 <!-- SECTION 8 END -->
 <!-- //////////////////////////////////////////////////////////////////////////////////////////////// -->
 
-
+<script>
+      function initMap() {
+        var uluru = {lat: 49.7128344, lng: 19.07528430000002};
+        var map = new google.maps.Map(document.querySelector('.map'), {
+          zoom: 10,
+          center: uluru
+        });
+        var marker = new google.maps.Marker({
+          position: uluru,
+          map: map
+        });
+      }
+    </script>
+ <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAC3hKiiqwH9DHgfulortX1iIzB1KtIcB0&callback=initMap">
+    </script>
  <script src="js/app.js"></script>
 </body>
 </html>

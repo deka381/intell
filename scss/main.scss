@@ -606,6 +606,107 @@ header{
   width:100%;
   height:600px;
   border:1px solid black;
+  position:relative;
+  display:flex;
+  .map{
+    width:55%;
+    height:100%;
+  }
+  .newsletter{
+    width:45%;
+    height:100%;
+    display:flex;
+    flex-direction:column;
+    background-color:#841f1f;
+    .newsletter-top,
+    .newsletter-bottom{
+      width:100%;
+      height:50%;
+      border:1px solid black;
+      display:flex;
+      align-items:center;
+    }
+    .newsletter-top-mid{
+      width:100%;
+      height:80%;
+      display:flex;
+      .mid-right,
+      .mid-left{
+        height:100%;
+      }
+      .mid-left{
+        width:40%;
+        padding-top: 20px;
+      }
+      .adres{
+        color:#fff;
+        font-size: 1.1rem;
+        padding: 0px 25px; 
+      }
+      .mid-reserwed{
+        font-weight: bold;
+        font-size:1.3rem;
+        margin-top: 30px;
+      }
+      .mid-right{
+        border:1px solid #fff;
+        margin:10px;
+        display:flex;
+        justify-content:center;
+        align-items:center;
+        flex-direction:column;
+        width:60%;
+        .mid-reserwed-right{
+        font-weight: bold;
+        font-size:1.5rem;
+        letter-spacing: 5px;
+        margin-bottom:30px;
+       }
+      }
+    }
+    .newsletter-bottom{
+      display:flex;
+      flex-direction:column;
+      justify-content:center;
+      color:#fff;
+      h4.discount{
+        font-family: $family1;
+        padding-bottom: 20px;
+        font-size:1.3rem;
+        letter-spacing: 5px;
+        font-weight: 100;
+      }
+      p.discount{
+        font-family: $family1;
+        font-size:0.6rem;
+      }
+      form{
+        display:flex;
+        justify-content:center;
+        flex-direction:column;
+        align-items:center;
+        margin-top: 20px;
+        .inputs{
+          margin-bottom:15px; 
+          display:flex;
+          justify-content:center;  
+          height:30px;
+          .input[type=text]{
+            border:none;
+            width:200px;
+          }
+          button{
+            background-color:#841f1f;
+            border:none;
+            color: #fff;
+          }
+        }
+        .checkbox{
+            font-size:0.6rem;
+          }
+      }
+    }
+  }
 }
 
 // SECTION 8 END
