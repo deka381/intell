@@ -12,8 +12,9 @@
 //     width: 0;
 // }
 $family2: 'Poiret One', cursive;
-
 $family1: 'Raleway', sans-serif;
+
+
 %button-black{
 	font-family: $family1;
       height: 30px;
@@ -72,4 +73,27 @@ $family1: 'Raleway', sans-serif;
   height:35px;
   line-height: 35px;
 }
-  
+
+%slider-buttons3x{
+  width:28%;
+  background-size:contain;
+  background-repeat: no-repeat; 
+  height:100%;
+  background-position: center;
+}
+%slider-smallbuttonMain{
+  width:120px;
+  height:35px;
+  position:absolute;
+  bottom:30px;
+  left:20px;
+  display:flex;
+  justify-content:space-between;
+}
+@mixin textInGaleryH2($fontSize, $letterSpace){
+  color:#000;
+  font-weight: 100;
+  font-family: $family1;
+  font-size: $fontSize;
+  letter-spacing: $letterSpace;
+}

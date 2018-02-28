@@ -344,11 +344,7 @@ header{
     .text_section4{
       padding-left:40px;
       h2{
-        color:#000;
-        font-weight: 100;
-        font-family: $family1;
-        font-size: 4rem;
-        letter-spacing: 15px;
+        @include textInGaleryH2(4rem,15px);
       }
       p{
         font-weight: 100;
@@ -388,22 +384,12 @@ header{
         }
       }
       .slider4-buttons{
-        width:120px;
-        height:35px;
-        position:absolute;
-        bottom:30px;
-        left:20px;
-        display:flex;
-        justify-content:space-between;
+        @extend %slider-smallbuttonMain;
         .slider4-prev,
         .slider4-pause,
         .slider4-next{
-          width:28%;
+          @extend %slider-buttons3x ;
           border:1px solid black;
-          background-size:contain;
-          background-repeat: no-repeat; 
-          height:100%;
-          background-position: center;
         }
         .slider4-prev{
           background-image: url("../img/svg/left-arrow.svg");
@@ -415,7 +401,7 @@ header{
         .slider4-pause{
           background-image: url("../img/svg/play.svg");
           &:hover{
-          background-image: url("../img/svg/pause.svg");    
+          background-image: url("../img/svg/pause.png");    
           border:2px solid black;
           }
         }
@@ -484,12 +470,27 @@ header{
     display:flex;
     justify-content:space-between;
     align-items:center;
-    border: 1px solid black;
      .slide_section6,
     .text_section6{
       width:50%;
       height:80%;
-      border:1px solid red;
+    }
+     .text_section6{
+      padding-left:40px;
+      h2{
+        @include textInGaleryH2(3rem,7px); 
+      }
+      p{
+        font-weight: 100;
+        font-size:0.8rem;
+        font-family: $family1;
+      }
+      .button_section6{
+        @extend %button-brown;
+        &:hover{
+          @extend %button-brown-hover;
+        }
+      }
     }
 
     // slide_section6 start
@@ -507,52 +508,42 @@ header{
           height:100%;
         }
         .img_slide_section6-1{
-          background-image: url("../img/back41.png");
+          background-image: url("../img/back61.png");
         }
         .img_slide_section6-2{
          background-image: url("../img/back21.png"); 
         }
         .img_slide_section6-3{
-          background-image: url("../img/back22.png");
+          background-image: url("../img/back41.png");
         }
       }
       .slider6-buttons{
-        width:120px;
-        height:35px;
-        position:absolute;
-        bottom:30px;
-        left:20px;
-        display:flex;
-        justify-content:space-between;
+        @extend %slider-smallbuttonMain;
         .slider6-prev,
         .slider6-pause,
         .slider6-next{
-          width:28%;
-          border:1px solid black;
-          background-size:contain;
-          background-repeat: no-repeat; 
-          height:100%;
-          background-position: center;
+          @extend %slider-buttons3x;
+          border: 1px solid #fff; 
         }
         .slider6-prev{
-          background-image: url("../img/svg/left-arrow.svg");
+          background-image: url("../img/svg/left-arrowWhite.png");
           &:hover{
-          background-image: url("../img/svg/left2.png");    
-          border:2px solid black;
+          background-image: url("../img/svg/left2White.png");    
+          border:2px solid #fff;
           }
         }
         .slider6-pause{
-          background-image: url("../img/svg/play.svg");
+          background-image: url("../img/svg/playWhite.png");
           &:hover{
-          background-image: url("../img/svg/pause.svg");    
-          border:2px solid black;
+          background-image: url("../img/svg/pauseWhite.png");    
+          border:2px solid #fff;
           }
         }
         .slider6-next{
-          background-image: url("../img/svg/next.svg");
+          background-image: url("../img/svg/nextWhite.png");
           &:hover{
-          background-image: url("../img/svg/right2.svg");    
-          border:2px solid black;
+          background-image: url("../img/svg/right2White.png");    
+          border:2px solid #fff;
           }
         }
       }
@@ -561,14 +552,66 @@ header{
   }
 }
 
+// SECTION 6 END
 
 
+////////////////////////////////////////////////////////////////////////////////////////////////
+
+// SECTION 7 START
+
+#section7{
+  width:100%;
+  height:500px;
+  background-image: url('../img/back71.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: bottom;
+
+  .container{
+    position:relative;
+    display:flex;
+    height:100%;
+    align-items:center;
+    .text-div-section7{
+      @extend %text-div-sectionX-black;
+      h4{
+        @include sectionX-black-h4(2.5rem,8px);
+        font-weight: 300;
+      } 
+      p{
+        margin-top: 20px;
+        font-family: $family1;
+        font-size:0.9rem;
+      }
+      .button-section7{
+        @extend %button-black;
+        margin-top: 20px;
+        &:hover{
+          @extend %section-black-button-hover;
+        }
+      }
+
+    }
+  }
+}
 
 
+// SECTION 7 END
 
 
+////////////////////////////////////////////////////////////////////////////////////////////////
+
+// SECTION 8 START
+#section8{
+  width:100%;
+  height:600px;
+  border:1px solid black;
+}
+
+// SECTION 8 END
 
 
+////////////////////////////////////////////////////////////////////////////////////////////////
 
 
 
