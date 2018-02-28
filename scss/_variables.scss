@@ -14,3 +14,62 @@
 $family2: 'Poiret One', cursive;
 
 $family1: 'Raleway', sans-serif;
+%button-black{
+	font-family: $family1;
+      height: 30px;
+      width: 45%;
+      border: 1px solid #fff;
+      font-size: 0.8rem;
+      text-align: center;
+      line-height: 30px;
+      margin-top: 50px;      
+      border-radius:3px;
+      border-radius: 3px;
+      transition-duration:500ms;
+      transition-delay:100ms;
+}
+%text-div-sectionX-black{
+  background-color: rgba(0,0,0,0.7);
+  height:70%;
+  width:45%;
+  position:absolute;
+  padding: 30px;
+  color:#fff;
+} 
+@mixin sectionX-black-h4($fontSize, $letterSpace){
+  text-align: left;
+  font-size: #{$fontSize};
+  letter-spacing: #{$letterSpace};  
+  font-weight: 100;
+  font-family: $family1;
+}
+// @include sectionX-black-h4(3.5rem,14px);
+%section-black-button-hover{
+  cursor: pointer;
+  width:50%;
+  height:35px;
+  line-height: 35px;
+}
+
+
+%button-brown{
+  color:#fff;
+  margin-top: 50px;
+  background-color: #841f1f;
+  display:block;
+  width: 50%;
+  height:30px;
+  text-align: center;
+  line-height: 30px;
+  font-size: 0.7rem;
+  border-radius: 3px;
+  transition-duration:500ms;
+  transition-delay:100ms;
+}
+%button-brown-hover{
+  cursor: pointer;
+  width:55%;
+  height:35px;
+  line-height: 35px;
+}
+  
