@@ -605,7 +605,6 @@ header{
 #section8{
   width:100%;
   height:600px;
-  border:1px solid black;
   position:relative;
   display:flex;
   .map{
@@ -617,20 +616,30 @@ header{
     height:100%;
     display:flex;
     flex-direction:column;
-    background-color:#841f1f;
     .newsletter-top,
     .newsletter-bottom{
       width:100%;
       height:50%;
-      border:1px solid black;
       display:flex;
       align-items:center;
     }
-    .newsletter-top-mid{
+    .newsletter-top{
+      position:relative;
+      .newsletter-top-background{
       width:100%;
-      height:80%;
+      height:100%;
+      background-image: url('../img/back81.png');
+      background-position: right;
+      }
+    }
+    .newsletter-top-mid{
+      position:absolute;
+      background-color:rgba(112, 31, 31, 0.9);
+      width:100%;
+      height:100%;
+      padding: 25px;
       display:flex;
-      .mid-right,
+      align-items:center;
       .mid-left{
         height:100%;
       }
@@ -649,6 +658,7 @@ header{
         margin-top: 30px;
       }
       .mid-right{
+        height:70%;
         border:1px solid #fff;
         margin:10px;
         display:flex;
@@ -668,6 +678,7 @@ header{
       display:flex;
       flex-direction:column;
       justify-content:center;
+      background-color:#1a1414;
       color:#fff;
       h4.discount{
         font-family: $family1;
@@ -691,14 +702,25 @@ header{
           display:flex;
           justify-content:center;  
           height:30px;
+          ::placeholder{
+              font-size:0.8rem;
+              padding-left:15px;
+            }
           .input[type=text]{
             border:none;
             width:200px;
+           
           }
           button{
             background-color:#841f1f;
             border:none;
+            transition-duration:500ms;
+            transition-delay:100ms;
             color: #fff;
+              &:hover{
+                background-color:#800000;
+              } 
+            }
           }
         }
         .checkbox{
@@ -707,14 +729,43 @@ header{
       }
     }
   }
-}
 
 // SECTION 8 END
 
 
 ////////////////////////////////////////////////////////////////////////////////////////////////
 
+//FOOTER
 
+  footer{
+    height:70px;
+    width:100%;
+    display:flex;
+    .footer-left,
+    .footer-right{
+      width:50%;
+      height:70px;
+      border:1px solid black;
+      ul{
+        display:flex;
+        justify-content:space-around;
+        width:100%;
+        height:100%;
+        align-items:center; 
+        li{
+          display:inline-block;
+          font-size:0.7rem;
+        }
+      }
+    }
+  }
+
+    
+        
+      
+
+
+//FOOTER
 
 
 
