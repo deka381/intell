@@ -1,0 +1,399 @@
+@import "grid";
+@import "variables";
+
+*{
+  box-sizing: border-box;
+  font-size:16px;
+  font-family: $family1;
+
+}
+a{
+  text-decoration: none;
+}
+/////////////////////////////////////////////////////////////////////////////////////////
+// HEADER START
+header{
+  width:100%;
+  height:100px;
+  background-color:#fff;
+  -webkit-box-shadow:0px 15px 65px 20px rgba(222,221,221,1);
+  -moz-box-shadow:0px 15px 65px 20px rgba(222,221,221,1);
+  box-shadow: 0px 15px 65px 20px rgba(222,221,221,1);
+  z-index: 999;
+  nav{
+    width: 88%;
+    height:100%;
+    ul{
+      margin-left:40px;
+      height: 100%;
+      display: flex;
+      align-items:center;
+      position: relative;
+      justify-content: space-around;
+      li{
+        font-family: $family1; 
+        font-weight: bold;
+        color:#1a1414;
+        display:inline-block;
+        font-size: 12px;
+        letter-spacing: 3px;
+      }
+      .menu_pl_img{
+        display:block;
+        height:50px;
+        width:50px;
+        border:1px solid black;
+        text-align: center;
+        line-height: 50px;
+      }
+      .menu_logo{
+        width:100px;
+        height:28px;
+        background-image: url(' ../img/logo_hotel.png');
+      }
+    }
+  }
+}
+// HEADER END
+
+/////////////////////////////////////////////////////////////////////////////////////////
+
+
+// SECTION 1 START
+
+#section1{
+  display:flex;
+  justify-content:center;
+  width:100%;
+  height:600px;
+  background-image: url('../img/back1.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  z-index: -1;
+  background-position: bottom;
+  .right-price{
+    height:65px;
+    width:300px;
+    background-color:#841f1f;
+    position:absolute;
+    top:55px;
+    right: 0px;
+    color:#fff;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    flex-direction:column;
+    letter-spacing: 3px;
+    h4{
+      font-weight: bold;
+      font-family:  $family1;     
+    }
+    p{
+      font-size: 0.7rem; 
+    }
+  }
+  .left-rate{
+    position:absolute;
+    left:65px;
+    bottom:80px;
+    height:65px;
+    width:65px;
+    border: 1px solid #e1e0df;
+    color: #dedddd;
+    text-align: center;
+    font-size:0.7rem;
+    background-color:rgba(0,0,0,0.4);
+    h4{
+      font-weight: bold;
+      font-size:1rem;
+      font-family: $family1;
+    }
+    p{
+      font-family: $family1;
+      font-weight: bold;
+    }
+    br{
+      font-size:1px;
+    }
+  }
+  .logo_section1{
+    position:absolute;
+    top: 0px;
+    background-image: url('../img/logo2_hotel.png');
+    background-size: cover;
+    display:block;
+    width:100px;
+    height:30px;
+    background-position: bottom;
+  }
+  .container{
+    position:absolute;
+    bottom:80px;
+    color:#fff;
+    display:flex;
+    justify-content:center;
+    text-align: center;
+    h2{
+      text-shadow: 1px 0px 4px #000000;
+      font-size: 3rem;
+      font-weight: 300;
+      letter-spacing: 15px;
+      font-family:$family1;
+
+    }
+    h4{
+
+        display: inline-block;     
+      i{
+        text-shadow: 1px 0px 4px #000000;
+        font-size: 1.6rem;
+        letter-spacing: 2px;
+        font-weight: 300;
+      }
+    }
+    img{
+      margin-left:10px;
+      width:30px;
+      height:30px;
+      display:inline-block;
+    }
+  }
+}
+
+// SECTION 1 END
+/////////////////////////////////////////////////////////////////////////////////////////
+
+// SECTION 2 START
+
+#section2 {
+  display:flex;
+  justify-content:center;
+  width:100%;
+  height:480px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  .text_section2{
+    width:100%;
+    margin-top: 20px;
+    color:#000;
+    display:flex;
+    justify-content:center;
+    text-align: center;
+    flex-direction:column;
+     h2{
+      font-size: 2.5rem;
+      letter-spacing: 12px;
+      font-family: $family1;
+      font-weight: 300;
+    }
+    p{
+      color:#888888;
+      font-size: 1.2rem;
+      letter-spacing: 1px;
+    }
+  }
+  .slide_section2{
+    padding-top: 20px;
+    width: 100%;
+    height:300px;
+    display:flex;
+    flex-direction:row;
+    justify-content:space-between;
+    .img_slide{
+      position:relative;
+      .img-slice-slider{
+        width:275px;
+        height:260px;
+        margin: 0 15px;
+        display:flex;
+        justify-content:center;
+        align-items: center;
+        &:hover .lookMore {
+        display:block;
+    }
+      }
+      .img-slide1{
+          background-image: url('../img/back21.png');
+          background-size: cover;
+        }
+        .img-slide2{
+          background-image:url('../img/back22.png');
+          background-size: cover;
+        }
+        .img-slide3{
+          background-image:url('../img/back23.png');
+          background-size: cover;
+        }
+      p{
+        padding-top: 20px;
+        text-align: center;
+        font-weight: bold;
+        font-size: 1rem;
+
+      }
+      .lookMore{
+        display:none;
+        width:100px;
+        height:30px;
+        color: #fff;
+        border:1px solid #fff;
+        text-align: center;
+        line-height: 30px;
+      }
+    }
+  }
+
+  // start slider section2
+  .container{
+    overflow: hidden;
+    width: 916px;
+    position:relative;
+    .slide_img_section2{
+      display:flex;
+      position:absolute;
+          transition: all 750ms ease;
+
+    }
+  }
+    
+
+  .slider-section2-prev,
+  .slider-section2-next{
+    position:absolute;
+    width:60px;
+    height:80px;
+    top:250px;
+    transform: translateY(-50%);
+    transition: all 150ms ease;
+    &:hover{
+      height:60px;
+
+    }
+  }
+  .slider-section2-prev{
+    background-image: url('../img/svg/left-arrow.svg');
+    background-size: cover;
+    left: 50px;
+  }
+  .slider-section2-next{
+    background-image: url('../img/svg/next.svg');
+    background-size: cover;
+    right: 50px;
+  }
+
+  // end slide_section2
+}
+      
+
+// SECTION 2 END
+/////////////////////////////////////////////////////////////////////////////////////////
+
+// SECTION 3 START
+
+#section3{
+  height:550px;
+  width:100%;
+  background-image: url('../img/back31.png');
+  background-size: cover;
+  background-position: bottom;
+  .container{
+    position:relative;
+    display:flex;
+    height:100%;
+    align-items:center;
+  .text-div-section3{
+    background-color: rgba(0,0,0,0.7);
+    height:70%;
+    width:45%;
+    position:absolute;
+    padding: 30px;
+    color:#fff;
+    h4{
+      text-align: left;
+      font-size: 3.5rem;
+      letter-spacing: 14px;
+      font-weight: 100;
+      font-family: $family1;
+    }
+    p{
+      font-family: $family1;
+      font-size:0.9rem;
+    }
+    .button-section3{
+      font-family: $family1;
+      height: 30px;
+      width: 45%;
+      border: 1px solid #fff;
+      font-size: 0.8rem;
+      text-align: center;
+      line-height: 30px;
+      margin-top: 50px;      
+    }
+   }
+  }
+
+}
+
+
+// SECTION 3 END
+/////////////////////////////////////////////////////////////////////////////////////////
+
+
+
+
+
+
+
+/*
+body{
+  background-image: url('../img/background.png');
+}
+nav{
+  width: 60%;
+  height: 60px;
+  background-color: black;
+  margin: 0 auto;
+  border-radius: 6px;
+  ul{
+    height: 100%;
+    display: flex;
+    align-items:center;
+    position: relative;
+    li{
+      display: inline-block;
+      margin-left: 20px;
+      font-size: 12px;
+      a{
+        color:  #c68642;
+        text-decoration: none;
+      }
+      &.line{
+        color:  #c68642;
+        font-size: 30px;
+        margin-bottom: 5px;
+      }
+      &.nav_right {
+         flex:none;      }
+      input{
+        width: 100px;
+        background-color:   #3c2f2f;
+        border: none;
+        padding-left: 10px;
+      }
+      button{
+        font-size: 12px;
+        margin-left: 0;
+        background-color: #8d5524;
+        height: 25px;
+        width: 130%;
+        color: #fff;
+        border-radius: 4px;
+        border:none;
+      }
+    }
+  }
+}
+
+*/

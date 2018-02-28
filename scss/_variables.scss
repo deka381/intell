@@ -1,0 +1,16 @@
+%clearfix{
+  display: block;
+  height: 0;
+  visibility: hidden;
+  clear: both;
+  content: "";
+}
+// @mixin arrow($direction) {
+//     border: 30px solid transparent;
+//     border-#{$direction}: 30px solid #95a5a6;
+//     height: 0;
+//     width: 0;
+// }
+$family2: 'Poiret One', cursive;
+
+$family1: 'Raleway', sans-serif;

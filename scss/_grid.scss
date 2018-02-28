@@ -1,0 +1,32 @@
+*{
+  box-sizing: border-box;
+}
+.container{
+  width: 916px;
+  margin: 0 auto;
+  .row{
+
+    &::before,
+    &::after{
+      @extend %clearfix;
+    }
+
+    [class*=col-]{
+      float: left;
+      padding:1%;
+      min-height: 1px;
+      width: 100%;
+    }
+
+    @media (min-width: 500px) {
+       @for $i from 1 through 12 {
+        .col-#{$i} {
+          width: (100% / 12) * $i;
+        }
+      }
+    }
+
+  }
+
+
+}
