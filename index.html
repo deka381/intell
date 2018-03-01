@@ -7,10 +7,10 @@
   <title>Dudzik</title>
   <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
   <link rel="stylesheet" href="./scss/reset.css">
-  <link rel="stylesheet" href="./css/main.css">
   <link rel="stylesheet" href="css/font-awesome-4.7.0/css/font-awesome.css">
   <link href="https://fonts.googleapis.com/css?family=Raleway:100,300,400,700" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Poiret+One" rel="stylesheet">
+  <link rel="stylesheet" href="./css/main.css">
   
 </head>
 <body>
@@ -324,12 +324,13 @@
       <p class="discount">Sprawdź warunki promocji i oszczędzaj!.</p>
       <div class="form">
         <form>
+        <p class="errorSent"></p>
         <div class="inputs">
-          <input type="text" id="mail" name="mail" placeholder="adres email...">
+          <input type="text" id="mail" name="mail" class="input-mail" placeholder="adres email...">
           <button class="button">WYŚLIJ</button>
         </div>
           
-          <label class="checkbox"><input type="checkbox" >Akceptuję regulami promocji * </label>
+          <label class="checkbox"><input type="checkbox" class="checkboxClick" >Akceptuję regulami promocji * </label>
         </form>
       </div>
     </div>

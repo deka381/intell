@@ -14,6 +14,15 @@ a{
 .hide{
   display:none !important; 
 }
+.errorSentMsg{
+  color:red;
+  font-size:0.6rem;
+}
+.goodSentMsg{
+  color:green;
+  font-size:0.6rem;
+
+}
 .nav_mobile{
       width:100px;
       height:20px;
@@ -1522,8 +1531,14 @@ header{
         font-size:0.8rem;
       }
     }
+    .newsletter-bottom{
+    h4.discount{
+      font-size:1rem; 
+      }
+     }
     }
   }
+      
 // SECTION 8 END
 
 

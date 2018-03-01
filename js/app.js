@@ -1,4 +1,5 @@
-document.addEventListener("DOMContentLoaded", function(){
+// document.addEventListener("DOMContentLoaded", function(){
+  document.addEventListener("DOMContentLoaded", function(){
 
 // slider Pakiety pobytowe START
 let section2Slider = function() {
@@ -182,6 +183,45 @@ close.addEventListener("click", function(){
 
 //
 
+//ajax
+const apiUrl="http://localhost:3000/users";
+const send = document.querySelector(".button");
+const inputMail = document.querySelector(".input-mail");
+const checkBox = document.querySelector(".checkboxClick");
+const errorSent = document.querySelector(".errorSent");
+const mailReg = new RegExp('^[0-9a-z_.-]+@[0-9a-z.-]+\.[a-z]{2,3}$', 'i');
+
+send.addEventListener("click", function(e){
+  e.preventDefault();
+  let inputMailValue = inputMail.value;
+
+    if(checkBox.checked && inputMailValue!=="" && mailReg.test(inputMailValue)) {
+      errorSent.classList.add('goodSentMsg');
+      errorSent.innerText="Wiadomość wysłana!";
+      inputMail.value="";
+      checkBox.checked=false;  
+        let newUser ={
+          email:inputMailValue,
+        }
+        $.ajax({
+            type:"POST",
+            url:apiUrl,
+            data:newUser,
+            dataType:"json"
+          }).done(function (response) {
+              console.log(response);
+          }).fail(function (error) {
+              console.log("error form POST");
+        });
+      
+    } else{
+      errorSent.classList.add('errorSentMsg');
+      errorSent.innerText="Błędny email bądź regulami nie został zaakceptowany!";
+      console.log("nie ma");
+    }
+})
+
+  
 
 
 
