@@ -48,9 +48,9 @@ next.addEventListener("click", function() {
   });
 
 
- setInterval(function() {
-    nextSlide()
-  }, 5000);
+ // setInterval(function() {
+ //    nextSlide()
+ //  }, 5000);
 
 
 
@@ -148,14 +148,8 @@ $(".goTop").click(function (){
      scrollTop: $('#header').offset().top
 }, 1000, 'linear');
 });
-
+ 
 //BACK TO TOP END
-
-
-
-// header sticky START
-    
-//  header sticky END 
 
 
 

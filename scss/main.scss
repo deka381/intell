@@ -5,6 +5,7 @@
   box-sizing: border-box;
   font-size:16px;
   font-family: $family1;
+  // border:1px solid black !important;
 
 }
 a{
@@ -859,10 +860,299 @@ header{
 
 
 
+// @import "max570";
+
+@media screen and (max-width: 907px) {
+    .container{
+        width: 100vw !important;
+      }  
+  
+
+/////////////////////////////////////////////////////////////////////////////////////////
+// HEADER START
+  header{
+    width:auto;
+    .main-nav{
+      display: none;
+    }
+    
+  }
+
+///////////////////////////////
+// SECTION 1 START
+
+#section1{
+  height:300px;
+  .left-rate{
+    display:none;
+  }
+  .logo_section1{
+    display:none;
+  }
+  .right-price{
+    height:40px;
+    width:auto;
+    left: 50px;
+    right:0px;
+    h4{
+      text-align: center;
+      font-size:0.6rem;
+    }
+    p{
+      text-align: center;
+      font-size:0.5rem; 
+    }
+  }
+  .text_section1{
+    img{
+      display:none;
+    }
+     h2 {
+     font-weight: 700; 
+    font-size: 1rem;
+    letter-spacing: 0;
+    }
+    h4{
+      i {
+      font-size: 0.7rem;
+      letter-spacing: 0px;
+      font-weight: 300;
+      }
+    }
+  }
+}
+      
+// SECTION 1 END
+///////////////////////////////////////////////////////////////////////////////////////////////////
+// SECTION 2 START
+  #section2{
+    display: flex;
+    justify-content: center;
+    margin-top: 100px;
+    height:1000px;
+    .text_section2{
+      h2{
+        font-size: 1rem;
+        letter-spacing: 2px;
+        }
+        p{
+          font-size: 0.6rem;
+        }
+      } 
+    .slide_img_section2{
+      display: block !important;
+      .slide_section2{
+        .img_slide {
+          position: relative;
+          width:100vw !important;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          }
+        } 
+      }
+        .slider-section2-prev{
+          top:500px;
+          left:0;
+          width:45px;
+        }
+        .slider-section2-next{
+          top:500px;
+          right:0;
+          width:45px;
+          background-position: right;
+        }
+    }
+
+        
+// SECTION 2 END
+///////////////////////////////////////////////////////////////////////////////////////////////////
+// SECTION 3 START
+  #section3{
+    margin-bottom:20px;
+    .text-div-section3{
+      width:100% !important;
+      .button-section3{
+        width:70% !important;
+      }
+    }
+  }
+
+// SECTION 3 END
+///////////////////////////////////////////////////////////////////////////////////////////////////
+// SECTION 4 START
+#section4{
+  height:600px;
+  .container{
+    flex-direction:column;
+    height:auto;
+    .slide_section4{
+      width:100%;
+      height:250px !important; 
+      .img_slide_section4{
+        background-position: center;
+      }
+    }
+    .text_section4{
+      padding-left:0 !important;
+      width:100% !important;
+    h2{
+      padding:10px;
+    }
+    p{
+      font-size:0.6rem;
+      padding:10px;
+    }
+    .button_section4{
+      margin-top: 20px;
+      margin-left: 20px;
+    }
+    }
+  }
+}
+// SECTION 4 END
+///////////////////////////////////////////////////////////////////////////////////////////////////
+// SECTION 5 START
+
+  #section5{
+    margin-bottom:20px;
+    .container{
+      .text-div-section5{
+        width:100%;
+        h4{
+          font-size:1.5rem;
+          letter-spacing: 5px;
+        }
+        p{
+          font-size:0.7rem;
+          margin-top: 30px;
+        }
+        .button-section5{
+          width:70%;
+        }
+      }
+    }
+  }
+      
+// SECTION 5 END
+///////////////////////////////////////////////////////////////////////////////////////////////////
+// SECTION 6 START
+
+  #section6{
+  height:500px;
+  .container{
+    flex-direction:column;
+    height:auto;
+    .slide_section6{
+      width:100%;
+      height:250px !important; 
+    }
+    .text_section6{
+      padding-left:0 !important;
+      width:100% !important;
+    h2{
+      font-size:1.8rem;
+      padding:10px;
+    }
+    p{
+      font-size:0.6rem;
+      padding:10px;
+    }
+    .button_section6{
+      margin-top: 20px;
+      margin-left: 20px;
+    }
+    }
+  }
+}
+
+// SECTION 6 END
+///////////////////////////////////////////////////////////////////////////////////////////////////
+// SECTION 7 START
+
+  #section7{
+    .container{
+      .text-div-section7{
+        width:100%;
+        h4{
+          font-size:1.5rem;
+          letter-spacing: 5px;
+        }
+        p{
+          padding: 20px;
+          font-size:0.7rem;
+          margin-top: 30px;
+        }
+      }
+    }
+  }
 
 
 
 
+// SECTION 7 END
+///////////////////////////////////////////////////////////////////////////////////////////////////
+// SECTION 8 START
+#section8{
+  flex-direction:column;
+  height:650px;
+  .map,.newsletter{
+    width:100%;
+  }
+  .newsletter{
+    .newsletter-top{
+      .newsletter-top-mid{
+        padding: 0;
+        .mid-left{
+          padding: 25px 10px;
+          p{
+            font-size:0.6rem;
+          }
+          .mid-reserwed{
+            margin-top:0;
+          } 
+        }
+        .mid-right{
+          padding: 0;
+          p{
+            font-size:0.7rem;
+          }
+          .mid-reserwed-right{
+            font-size:0.9rem;
+            margin-bottom:15px;
+          }        
+        }
+      }
+    }
+    .newsletter-bottom{
+      padding-bottom: 15px;
+      h4.discount{
+        font-size:1rem;
+        padding-bottom: 0;
+        margin-bottom:2px;
+       }
+       form{
+        height:60px;
+        margin-top: 0;
+        .inputs{
+          margin-bottom:0;
+        }
+        .checkbox{
+            margin-top: 5px;
+          }
+       }
+      }
+    }
+  }
+
+    
+
+
+footer,header{
+  display:none !important;
+}
+}//end of 570
 
 
 
