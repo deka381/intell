@@ -11,6 +11,113 @@
 a{
   text-decoration: none;
 }
+.nav_mobile{
+      width:100px;
+      height:20px;
+      margin-top:10px;
+      // display:flex;
+      justify-content: flex-end;
+      align-items:center;
+      padding: 10px;
+      box-sizing:border-box;
+        .hamburger{
+          float: right;
+          margin-top: 10px;
+          margin-right: 20px;
+          display:block;
+          background: transparent;
+          width:40px;
+          height:35px;
+          border:0;
+          right:0;
+          border-top:5px solid #000;
+          position:relative;
+          transition: 0.3s transform linear;
+          &::before, &::after{
+            content: ''; 
+            position:absolute;
+            top:0;
+            left:0;
+            width: 100%;
+            border-top: 5px solid #000;
+            transform: translateY(10px);
+          } 
+          &::after{
+            transform: translateY(25px);
+            transition: 0.3s transform linear;
+          }  
+          &:focus{
+            transform:rotate(45deg) translateY(5px);
+            border: none;
+            &::after{
+              transform:rotate(-90deg) translateX(-10px);
+            }
+          } 
+        }
+        .mobile_menu{
+          border-radius: 20px 0 0 20px;
+          display:flex;
+          box-sizing:border-box;
+          position:absolute;
+          top:0px;
+          right:0;
+          height:auto;
+          padding-bottom: 20px; 
+          width:70%;
+          z-index: 10;
+          transform:translateX(100%);
+          background: #841f1f;
+          transition: 0.6s transform ease-in-out;
+          flex-direction:column;
+          .close{
+            background-color:transparent;
+            height:50px;
+            width:50px;
+            display: flex;
+            align-self: center;
+            justify-content: center;
+            border:none;
+            border-radius:4px;
+            background-image: url('../img/svg/out.svg');
+            background-size: cover;
+          }
+          .closeAnimation{
+            animation:animowany_in 1s linear 1; 
+          }
+          .closeAnimationOut{
+            animation:animowany_out 1s linear 1; 
+          }
+
+          ul{
+            padding: 0;
+            list-style-type: none;
+            margin: 0 10px;
+            display:flex;
+            flex-wrap: wrap;
+            align-content:flex-start;
+            li{
+              background: #fff;
+              margin-top: 20px;
+              color: blue;
+              border-radius:5px;
+              flex-basis:100%;
+              display:flex;
+              height:30px;
+                &:hover a::after{
+                  display:none;  
+                }
+              a{
+                display:flex;
+                padding:10px;
+                text-decoration: none;
+                align-items:center;
+                height:100%;
+                width:100%;
+              }
+            }
+          }
+        }
+      }
 /////////////////////////////////////////////////////////////////////////////////////////
 // HEADER START
 header{
@@ -22,9 +129,10 @@ header{
   box-shadow: 0px 15px 65px 0px rgba(222,221,221,1);
   z-index: 999;
   
-  .hamburger{
+  .hamburger, .nav_mobile{
     display:none;
   }
+
   nav{
     width: 88%;
     height:100%;
@@ -785,6 +893,7 @@ header{
           li{
             display:inline-block;
             font-size:0.7rem;
+            color:#7b7172;
           }
         }
       }
@@ -868,25 +977,14 @@ header{
 /////////////////////////////////////////////////////////////////////////////////////////
 /////////////////////////////////////////////////////////////////////////////////////////
 
-// @import "max570";
+// @import "max650";
 
-@media screen and (max-width: 907px) {
+@media screen and (max-width: 650px) {
     .container{
         width: 100vw !important;
       }  
   
-@keyframes animowany_in
-{
-  0% { transform:rotate(0); }
-  40% { transform:rotate(-90deg); }
-  100% { transform:rotate(-360deg); }
-}
-@keyframes animowany_out
-{
-  0% { transform:rotate(0); }
-  40% { transform:rotate(90deg); }
-  100% { transform:rotate(360deg); }
-}
+
 /////////////////////////////////////////////////////////////////////////////////////////
 // HEADER START
   header{
@@ -895,113 +993,10 @@ header{
     .main_menu{
       display: none;
     }
-    
     .nav_mobile{
-      width:100px;
-      height:20px;
-      margin-top:10px;
       display:flex;
-      justify-content: flex-end;
-      align-items:center;
-      padding: 10px;
-      box-sizing:border-box;
-        .hamburger{
-          float: right;
-          margin-top: 10px;
-          margin-right: 20px;
-          display:block;
-          background: transparent;
-          width:40px;
-          height:35px;
-          border:0;
-          right:0;
-          border-top:5px solid #000;
-          position:relative;
-          transition: 0.3s transform linear;
-          &::before, &::after{
-            content: ''; 
-            position:absolute;
-            top:0;
-            left:0;
-            width: 100%;
-            border-top: 5px solid #000;
-            transform: translateY(10px);
-          } 
-          &::after{
-            transform: translateY(25px);
-            transition: 0.3s transform linear;
-          }  
-          &:focus{
-            transform:rotate(45deg) translateY(5px);
-            border: none;
-            &::after{
-              transform:rotate(-90deg) translateX(-10px);
-            }
-          } 
-        }
-        .mobile_menu{
-          display:flex;
-          box-sizing:border-box;
-          position:absolute;
-          top:0px;
-          right:0;
-          height:auto;
-          padding-bottom: 20px; 
-          width:70%;
-          z-index: 10;
-          transform:translateX(100%);
-          background: #841f1f;
-          transition: 0.6s transform ease-in-out;
-          flex-direction:column;
-          .close{
-            background-color:transparent;
-            height:50px;
-            width:50px;
-            display: flex;
-            align-self: center;
-            justify-content: center;
-            border:none;
-            border-radius:4px;
-            background-image: url('../img/svg/out.svg');
-            background-size: cover;
-          }
-          .closeAnimation{
-            animation:animowany_in 1s linear 1; 
-          }
-          .closeAnimationOut{
-            animation:animowany_out 1s linear 1; 
-          }
-
-          ul{
-            padding: 0;
-            list-style-type: none;
-            margin: 0 10px;
-            display:flex;
-            flex-wrap: wrap;
-            align-content:flex-start;
-            li{
-              background: #fff;
-              margin-top: 20px;
-              color: blue;
-              border-radius:5px;
-              flex-basis:100%;
-              display:flex;
-              height:30px;
-                &:hover a::after{
-                  display:none;  
-                }
-              a{
-                display:flex;
-                padding:10px;
-                text-decoration: none;
-                align-items:center;
-                height:100%;
-                width:100%;
-              }
-            }
-          }
-        }
-      }
+    }
+    
     
   // mobile menu move start
 
@@ -1302,23 +1297,249 @@ header{
     }
         
         
-        
+}//end of 650
+        ////////////////////////////////////////////////////////////////////////////
+        ////////////////////////////////////////////////////////////////////////////
+        ////////////////////////////////////////////////////////////////////////////
+        ////////////////////////////////////////////////////////////////////////////
+
+//start of 899
+@media all and (min-width:651px) and (max-width:899px) {
+
+
+header{
+    width:100%;
+    height:60px;
+    .main_menu{
+      display: none;
+    }
+    .nav_mobile{
+      display:flex;
+    }
+    
+    
+  // mobile menu move start
+
+  // .hamburger:focus ~ .mobile_menu, .mobile_menu:hover{
+  //   transform:translateX(0);
+  // }
+
+
+  // mobile menu move start
+
+  }
    
-      
+     ///////////////////////////////
+// SECTION 1 START
+
+#section1{
+  height:300px;
+  .logo_section1{
+    display:none;
+  }
+  .text_section1{
+     h2 {
+    font-weight: 700; 
+    font-size: 2rem;
+    letter-spacing: 10px;
+    }
+    h4{
+      i {
+      font-size: 1rem;
+      letter-spacing: 3px;
+      font-weight: 300;
+      }
+    }
+  }
+}
+
+// SECTION 1 END
+/////////////////////////////////////////////////////////////////////////////////////////////////// 
   
+///////////////////////////////////////////////////////////////////////////////////////////////////
+// SECTION 2 START
+  #section2{
+    display: flex;
+    justify-content: center;
+    height:1000px;
+    margin-top: 0px;
+    .text_section2{
+      h2{
+        font-size: 2rem;
+        letter-spacing: 10px;
+        }
+        p{
+          font-size: 0.6rem;
+        }
+      } 
+    .slide_img_section2{
+      display: block !important;
+      .slide_section2{
+        .img_slide {
+          position: relative;
+          width:100vw !important;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          }
+        } 
+      }
+        .slider-section2-prev{
+          top:500px;
+          left:0;
+          width:45px;
+        }
+        .slider-section2-next{
+          top:500px;
+          right:0;
+          width:45px;
+          background-position: right;
+        }
+    }
+
+        
+// SECTION 2 END
+///////////////////////////////////////////////////////////////////////////
+// SECTION 8 START
+#section8{
+  flex-direction:column;
+  height:650px;
+  .map,.newsletter{
+    width:100%;
+  }
+  .newsletter{
+    .newsletter-top{
+      .newsletter-top-mid{
+        padding: 0;
+        .mid-left{
+          padding: 25px 10px;
+          p{
+            font-size:1rem;
+          }
+          .mid-reserwed{
+            margin-top:0;
+          } 
+        }
+        .mid-right{
+          padding: 0;
+          p{
+            font-size:1rem;
+          }
+          .mid-reserwed-right{
+            font-size:1.5rem;
+            margin-bottom:15px;
+          }        
+        }
+      }
+    }
+    .newsletter-bottom{
+      padding-bottom: 15px;
+      h4.discount{
+        letter-spacing: 10px;
+        font-size:1.5rem;
+        padding-bottom: 0;
+        margin-bottom:2px;
+       }
+       form{
+        height:60px;
+        margin-top: 0;
+        .inputs{
+          margin-bottom:0;
+        }
+        .checkbox{
+            margin-top: 5px;
+          }
+       }
+      }
+    }
+  }
+// SECTION 8 END
+}//end of 899
+
+///////////////////////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////////////////
+// start od 900
+
+@media all and (min-width:900px) and (max-width:1099px) {
+
+header{
+  nav{
+    width: 88%; 
+    height:100%;
+    ul{
+      li{
+        font-size:0.5rem;
+      }
+    }
+  }
+}
+
+////////////////////////////////////////////////////////
+// start SECTION 1
+
+#section1{
+  .left-rate{
+    left:30px;
+  }
+}
 
 
-}//end of 570
+
+// end SECTION 1
+////////////////////////////////////////////////////////////////////
+
+// start SECTION 2
+      #section2{
+        .slider-section2-prev{
+          left:10px;
+        }
+        .slider-section2-next{
+          right:10px;
+        }
+      }
+        
+          
+
+
+// end SECTION 2
+////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////
+// SECTION 8 START
+#section8{
+  .newsletter{
+    .mid-left{
+      padding-top: 40px !important;
+      .adres{
+        padding: 0;
+        font-size:0.8rem;
+      }
+    }
+    }
+  }
+// SECTION 8 END
 
 
 
 
+}//end of 900
 
-
-
-
-
-
+@keyframes animowany_in
+{
+  0% { transform:rotate(0); }
+  40% { transform:rotate(-90deg); }
+  100% { transform:rotate(-360deg); }
+}
+@keyframes animowany_out
+{
+  0% { transform:rotate(0); }
+  40% { transform:rotate(90deg); }
+  100% { transform:rotate(360deg); }
+}
 
 
 
@@ -1373,3 +1594,4 @@ nav{
 }
 
 */
+
