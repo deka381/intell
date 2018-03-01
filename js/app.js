@@ -165,12 +165,14 @@ burger.addEventListener("click", function(){
       close.classList.add("closeAnimation");
       close.classList.remove("closeAnimationOut");
       burger.style.display="none";
+      menuMobile.classList.remove("hide");
 });
 close.addEventListener("click", function(){
       menuMobile.style.transform = "translateX(100%)";
       close.classList.remove("closeAnimation");
       close.classList.add("closeAnimationOut");
       burger.style.display="block";
+      menuMobile.classList.add("hide");
   });
 
 
