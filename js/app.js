@@ -161,18 +161,22 @@ let close= document.querySelector(".close");
 console.log(burger);
   let open= 1;
 burger.addEventListener("click", function(){
+      setTimeout(function(){ 
       menuMobile.style.transform = "translateX(0)";
       close.classList.add("closeAnimation");
       close.classList.remove("closeAnimationOut");
       burger.style.display="none";
-      menuMobile.classList.remove("hide");
+        }, 100);
+        menuMobile.classList.remove("hide");
 });
 close.addEventListener("click", function(){
       menuMobile.style.transform = "translateX(100%)";
       close.classList.remove("closeAnimation");
       close.classList.add("closeAnimationOut");
       burger.style.display="block";
-      menuMobile.classList.add("hide");
+      setTimeout(function(){ 
+        menuMobile.classList.add("hide");
+        }, 1000);
   });
 
 

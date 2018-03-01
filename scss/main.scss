@@ -1,8 +1,6 @@
 @import "grid";
 @import "variables";
-body{
-  overflow: hidden;
-}
+
 *{
   box-sizing: border-box;
   font-size:16px;
@@ -14,7 +12,7 @@ a{
   text-decoration: none;
 }
 .hide{
-  display:none; 
+  display:none !important; 
 }
 .nav_mobile{
       width:100px;
