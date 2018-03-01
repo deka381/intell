@@ -153,7 +153,28 @@ $(".goTop").click(function (){
 
 
 
+// burder
 
+let burger = document.querySelector(".hamburger");
+let menuMobile= document.querySelector(".mobile_menu");
+let close= document.querySelector(".close");
+console.log(burger);
+  let open= 1;
+burger.addEventListener("click", function(){
+      menuMobile.style.transform = "translateX(0)";
+      close.classList.add("closeAnimation");
+      close.classList.remove("closeAnimationOut");
+      burger.style.display="none";
+});
+close.addEventListener("click", function(){
+      menuMobile.style.transform = "translateX(100%)";
+      close.classList.remove("closeAnimation");
+      close.classList.add("closeAnimationOut");
+      burger.style.display="block";
+  });
+
+
+//
 
 
 
