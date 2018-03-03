@@ -143,14 +143,7 @@ window.onload = function() {
 // slider Galery END
 
 
-// BACK TO TOP START
-$(".goTop").click(function (){
-   $('html, body').animate({
-     scrollTop: $('#header').offset().top
-}, 1000, 'linear');
-});
- 
-//BACK TO TOP END
+
 
 
 
@@ -222,7 +215,62 @@ send.addEventListener("click", function(e){
 })
 
   
+// BACK TO TOP START
+$(".goTop").click(function (){
+   $('html, body').animate({
+     scrollTop: $('#header').offset().top
+}, 1000, 'linear');
+});
+ 
+//BACK TO TOP END
 
+// go to section
 
+$(".li-pakiety").click(function (){
+   $('html, body').animate({
+     scrollTop: $('#section2').offset().top
+}, 500, 'linear');
+});
 
+$(".li-spa").click(function (){
+   $('html, body').animate({
+     scrollTop: $('#section4').offset().top
+}, 500, 'linear');
+});
+
+$(".li-konferencja").click(function (){
+   $('html, body').animate({
+     scrollTop: $('#section6').offset().top
+}, 500, 'linear');
+});
+
+$(".li-pokoje").click(function (){
+   $('html, body').animate({
+     scrollTop: $('#section5').offset().top
+}, 500, 'linear');
+});
+
+$(".li-kontakt").click(function (){
+   $('html, body').animate({
+     scrollTop: $('#section8').offset().top
+}, 500, 'linear');
+});
+
+const myBtnGoTop= document.querySelector(".myBtnGoTop");
+
+window.onscroll = function() {scrollFunction()};
+function scrollFunction() {
+    if (document.body.scrollTop > 600 && document.body.scrollTop <3300 ) {
+        myBtnGoTop.style.display = "flex";
+    } else {
+        myBtnGoTop.style.display = "none";
+    }
+}
+
+$(".myBtnGoTop").click(function (){
+   $('html, body').animate({
+     scrollTop: $('#section1').offset().top
+}, 500, 'linear');
+});
+//
 });
