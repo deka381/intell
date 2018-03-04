@@ -273,4 +273,22 @@ $(".myBtnGoTop").click(function (){
 }, 500, 'linear');
 });
 //
+
+
+
+const liRestauracja = document.querySelector(".li-restauracja");
+const liRestauracjaUL = liRestauracja.querySelector('ul');
+const liWesele = document.querySelector(".li-wesele");
+const liWeseleUL = liWesele.querySelector('ul');
+
+liRestauracja.addEventListener("click", function(){
+    liRestauracjaUL.classList.toggle("hide");    
+    
+});
+liWesele.addEventListener("click", function(){
+    liWeseleUL.classList.toggle("hide");    
+    
+});
+
+
 });
