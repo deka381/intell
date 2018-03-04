@@ -5,7 +5,6 @@
 let section2Slider = function() {
   let slider = document.querySelector(".carusel");
   let sliderWidth = slider.offsetWidth;
-  console.log(sliderWidth);
   let sliderList = document.querySelector(".slide_img_section2");
   let count =1;
   let items = sliderList.querySelectorAll(".slide_section2").length;
@@ -152,7 +151,6 @@ window.onload = function() {
 let burger = document.querySelector(".hamburger");
 let menuMobile= document.querySelector(".mobile_menu");
 let close= document.querySelector(".close");
-console.log(burger);
   let open= 1;
 burger.addEventListener("click", function(){
       setTimeout(function(){ 
@@ -211,7 +209,6 @@ send.addEventListener("click", function(e){
     } else{
       errorSent.classList.add('errorSentMsg');
       errorSent.innerText="Błędny email bądź regulami nie został zaakceptowany!";
-      console.log("nie ma");
     }
 })
 
