@@ -192,6 +192,7 @@ send.addEventListener("click", function(e){
       errorSent.classList.add('goodSentMsg');
       errorSent.innerText="Wiadomość wysłana!";
       inputMail.value="";
+      alert("Twój email został zapisany do newslettera !");
       checkBox.checked=false;  
         let newUser ={
           email:inputMailValue,
